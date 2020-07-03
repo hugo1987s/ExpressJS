@@ -14,13 +14,14 @@ app.post('/postPage', (req, res) => {
     res.send('Post method executed');
 });
 
-app.put('/putPage', (req, res) => {
+app.put('/putPage/:codigo', (req, res) => {
+    console.log(req.params.codigo);
     console.log(req.body);
     res.send('Put method executed');
 });
 
 app.delete('/deletePage/:codigo', (req, res) => {
-    console.log(req.params);
+    console.log(req.params.codigo);
     res.send('Delete method executed');
 });
 
